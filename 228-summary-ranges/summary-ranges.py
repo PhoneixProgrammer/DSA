@@ -21,3 +21,10 @@ class Solution:
             result.append(f"{start}->{nums[-1]}")
 
         return result
+
+        #Time Complexity: O(n)
+        #-->You go through the list once.
+        #-->Each element is visited exactly once.
+        #-->No nested loops or repeated work.
+
+        #Space Complexity: O(1) 
