@@ -5,3 +5,4 @@ class Solution:
             if item in nums2:
                 res.add(item)
         return list(res)
+#time complexity : O(n*m) 
