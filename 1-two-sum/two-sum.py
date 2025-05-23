@@ -8,4 +8,5 @@ class Solution:
             if complement in dic:
                 return [i,dic[complement]]
             dic[num]=i
+            #hashmap :ds
         return [-1,1]
