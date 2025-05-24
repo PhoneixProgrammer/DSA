@@ -11,9 +11,14 @@ class Solution:
         '''
         # Hashmap DS
         seen ={}
-        for i,num in enumerate(nums):
-            if num in seen :
-                if i-seen[num]<=k :
+        for i,num in enumerate(nums): # this takes O(n) time
+            if num in seen : # O(1) because hashmap
+                if i-seen[num]<=k : #O(1)
                     return True
-            seen[num]=i
+            seen[num]=i #O(1)
+            ##print(seen)
         return False
+        # Time complexity : O(n)
+        #Space Complexity : O(n)
+        # because in worst case scenario if all the elements in the nums is distinct then it stores each element in the seen which is a dict
+        # so it stores each value with its index , if you have 1 billion elements in the array , its stores 1 billion value to its index value
