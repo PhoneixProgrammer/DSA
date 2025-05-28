@@ -17,3 +17,6 @@ class Solution:
 
         inorder(root)
         return result
+
+        #time complexity : O(n) because each node is visited only once
+        #s.c:O(h),his the height of the tree due to recursion track
