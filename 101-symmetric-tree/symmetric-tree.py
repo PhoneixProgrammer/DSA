@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        '''
         #Recursive approach
         if not root :
             return True
@@ -19,4 +20,28 @@ class Solution:
 
         return isMirror(root.left, root.right)
 
+        #time complexity : O(n) as each node is visted exactly once and s.c: O(h) h--> height of the tree
+        '''
+
+        #Iterative Approach 
+        if not root :
+            return True 
+        
+        queue = deque()
+        queue.append((root.left,root.right))
+
+        while queue:
+            t1,t2 = queue.popleft()
+
+            if not t1 and not t2:
+                continue# Both are null , that means reached end of the respective subtrees , it is symmetric
+            if not t1 or not t2: 
+                return False # one is null, the other not
+            if t1.val != t2.val:
+                return False # Values differ
+            
+            queue.append((t1.left,t2.right))
+            queue.append((t1.right, t2.left))
+        return True
+        
         #time complexity : O(n) as each node is visted exactly once and s.c: O(h) h--> height of the tree
