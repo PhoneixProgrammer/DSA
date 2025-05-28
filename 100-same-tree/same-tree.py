@@ -14,5 +14,6 @@ class Solution:
             return False #different values
         
         return self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right) 
+        #t.c:O(n),Sc.:O(h)
 
         
