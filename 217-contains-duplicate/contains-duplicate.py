@@ -22,3 +22,6 @@ class Solution:
             else:
                 seen.add(num)
         return False
+
+        # t.c : O(n) and s.c: O(n)
+        # advantage over the hashmap is it can exit early if a duplicate is found
