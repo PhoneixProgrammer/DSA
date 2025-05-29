@@ -1,5 +1,6 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
+        '''
         count ={}
         for num in nums :
             if num in count:
@@ -13,3 +14,11 @@ class Solution:
         return False
 
         # t.c : O(n) and s.c : O(n)
+        '''
+        seen=set()
+        for num in nums:
+            if num in seen:
+                return True
+            else:
+                seen.add(num)
+        return False
