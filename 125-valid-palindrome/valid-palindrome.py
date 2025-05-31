@@ -12,3 +12,5 @@ class Solution:
             right -=1
         
         return True
+
+        #t.c : O(n) and s.c : O(n)
