@@ -21,4 +21,7 @@ class Solution:
                 #calculate profit if sold today and update max_profit if better
                 max_profit = max(max_profit, price - min_price)
         return max_profit
+
+        #time complexity : O(n) as only one time traversal through the prices array
+        # space complecity : O(1)
             
