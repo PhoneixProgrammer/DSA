@@ -34,3 +34,6 @@ class Solution:
             if node.left:
                 stack.append(node.left)
         return result 
+        # t.c : O(n)
+        # s.c : worst case scenario : O(n)
+        # s.c : balanced :  O(logn)
