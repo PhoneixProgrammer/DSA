@@ -25,3 +25,6 @@ class Solution:
                 pB = headA
         return pA
 
+        # t.c : O(m+n)
+        # s.c : O(1)
+
