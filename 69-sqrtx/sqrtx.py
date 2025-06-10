@@ -16,3 +16,6 @@ class Solution:
                 right = mid -1 #go left to find a smaller candidate
         #when the loop ends, right is the integer part of sqrt(x)
         return right
+
+        # t.c : O(logx) as it is binary search
+        # s.c : O(1)
