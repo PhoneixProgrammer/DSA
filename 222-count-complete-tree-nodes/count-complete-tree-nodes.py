@@ -44,3 +44,6 @@ class Solution:
         
         #total nodes= nodes above last level+nodes in last level
         return (2**depth-1) +left
+
+        #t.c: O((logn)^2)
+        # s.c : O(1) because varibales
