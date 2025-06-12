@@ -27,8 +27,7 @@ class Solution:
                 else :
                     node = node.right
                     left = mid + 1
-                if node is None:
-                    return False
+            
             return node is not None
         
         depth = get_depth(root)
