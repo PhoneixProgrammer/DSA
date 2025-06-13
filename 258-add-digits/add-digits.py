@@ -7,3 +7,5 @@ class Solution:
                 num //= 10
             num = sum_digits
         return num
+
+        #t.c :O(logn)
