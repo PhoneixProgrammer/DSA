@@ -7,3 +7,5 @@ class Solution:
         if n > 0 :
             res = math.log(n)/math.log(3)
             return abs(res - round(res)) < 1e-10  # Tolerance check
+
+        #t.c and s.c  = O(1)
