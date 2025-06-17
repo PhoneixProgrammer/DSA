@@ -1,6 +1,6 @@
 class Solution:
     def sumOfGoodNumbers(self, nums: List[int], k: int) -> int:
-        
+
         good_num = []
         n = len(nums)
 
@@ -25,3 +25,6 @@ class Solution:
         for i in range(len(good_num)):
             res = res + good_num[i]
         return res
+
+        # time complexity :O(n)
+        # space complexity : O(n)
