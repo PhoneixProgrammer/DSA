@@ -3,6 +3,7 @@ class Solution:
         if num == 0:
             return "0"
         
+        
         hex_chars = "0123456789abcdef"
         result = ""
 
