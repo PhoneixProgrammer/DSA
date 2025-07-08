@@ -10,4 +10,4 @@ class Solution:
                 result.append('-')
                 count = 0
         
-        return ''.join(reversed(result))
+        return ''.join(result[::-1])
