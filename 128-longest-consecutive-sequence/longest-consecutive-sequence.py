@@ -16,3 +16,6 @@ class Solution:
                 longest = max(longest, count)
 
         return longest
+
+        #T.c : O(n)
+        #S.c : O(n)
