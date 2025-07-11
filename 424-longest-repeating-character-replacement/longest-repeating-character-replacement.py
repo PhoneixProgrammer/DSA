@@ -15,5 +15,7 @@ class Solution:
             result = max(result, right - left + 1)
 
         return result
-    
+
+        #t.c : O(n)
+        #s.c  : O(1)
         
