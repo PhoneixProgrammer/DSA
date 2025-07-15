@@ -26,3 +26,6 @@ class Solution:
                 count += 1
 
         return dummy.next    
+
+        # time complexity is O(Nlogk)
+        # space complexity is O(k)
