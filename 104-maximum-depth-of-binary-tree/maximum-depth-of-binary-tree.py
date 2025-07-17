@@ -16,3 +16,6 @@ class Solution:
 
         #Depth of the current node is 1+  the max of left and right depths
         return 1 + max(left_depth,right_depth)
+
+        #Time Complexity : O(n)
+        #Space Complexity : O(h)
