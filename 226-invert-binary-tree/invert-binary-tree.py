@@ -38,3 +38,6 @@ class Solution:
             if current.right :
                 queue.append(current.right)
         return root
+
+        #time complexity :O(n)
+        #space complexity :O(n)
