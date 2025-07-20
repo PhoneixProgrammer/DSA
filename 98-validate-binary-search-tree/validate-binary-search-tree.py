@@ -17,3 +17,8 @@ class Solution:
             #Right subtree :  all nodes > current node's value
             return (validate(node.left,low,node.val) and validate(node.right,node.val,high))
         return validate(root)
+
+        #time complexity : O(n) --> visit each node exactly once
+        #space complexity : O(h) --> h  is height of the tree
+        # balanced tree :O(logn )
+        # skewed tree : O(n)
