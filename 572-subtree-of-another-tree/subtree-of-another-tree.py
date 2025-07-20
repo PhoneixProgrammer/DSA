@@ -22,3 +22,8 @@ class Solution:
         
         #Both values match, now check left and right subtrees
         return self.isSameTree(s.left,t.left) and self.isSameTree(s.right,t.right)
+
+        #Time Complexity : O(n*m)
+        #SPace Complexity : O(n+m)
+        # n is the number of nodes in the root 
+        # m is the number of nodes in the subroot
