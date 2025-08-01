@@ -11,3 +11,5 @@ class Solution:
                 total+=val
             prev = val
         return total
+        #Time Complexity : o(n)
+        #Space Complexity : O(1)
