@@ -15,3 +15,6 @@ class Solution:
                     return False
 
         return len(stack)==0
+
+        #Time Compelxity : O(n)
+        #Space Complexity : O(n)
