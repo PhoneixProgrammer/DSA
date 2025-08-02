@@ -17,3 +17,6 @@ class Solution:
                 p2-=1
         return nums1
 
+        #time complexity : O(m+n)
+        #Space complexity : O(1)
+
