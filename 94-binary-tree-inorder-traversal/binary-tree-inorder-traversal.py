@@ -15,4 +15,6 @@ class Solution:
             self.helper(root.left,res)
             res.append(root.val)
             self.helper(root.right,res)
- 
+    
+    #Time complexity :O(n)
+    #Space Complexity :O(n)
