@@ -9,3 +9,6 @@ class Solution:
             elif prices[i] - min_price > max_profit: 
                 max_profit = prices[i] - min_price
         return max_profit
+
+        #time complexity : O(n)
+        #space complexity : O(1)
