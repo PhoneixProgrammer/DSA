@@ -1,11 +1,8 @@
 class Solution:
     def reverseBits(self, n: int) -> int:
-        #step1 : convert the n into 32 bit binary format string
-        binary = bin(n)[2:].zfill(32)
+        binary_number = bin(n)[2:].zfill(32)
+        #print(binary_number)
 
-        #step 2 :  reverse the binary string 
-        reversed_binary = binary[::-1]
+        reversed_binary_number = binary_number[::-1]
 
-        #step 3: convert back to integer
-        return int(reversed_binary,2)
-
+        return int(reversed_binary_number,2)
