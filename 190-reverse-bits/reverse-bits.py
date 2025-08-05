@@ -6,5 +6,6 @@ class Solution:
         #step 2 :  reverse the binary string 
         reversed_binary = binary[::-1]
 
+        #step 3: convert back to integer
         return int(reversed_binary,2)
 
