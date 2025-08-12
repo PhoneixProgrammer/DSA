@@ -3,9 +3,14 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        i = 0
-        for j in range(len(nums)):
-            if nums[j]!=0:
-                nums[i],nums[j] = nums[j],nums[i]
-                i+=1
+        lastNonZeroFoundAt = 0
+
+        #Move all the non-zero elements to the end 
+        for i in range (len(nums)):
+            if nums[i]!=0:
+                nums[lastNonZeroFoundAt] = nums[i]
+                lastNonZeroFoundAt += 1
         
+        #fill remaining position with zeros
+        for i in range(lastNonZeroFoundAt,len(nums)):
+            nums[i]=0
