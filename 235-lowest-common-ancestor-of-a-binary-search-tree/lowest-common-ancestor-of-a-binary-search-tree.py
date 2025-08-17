@@ -18,3 +18,7 @@ class Solution:
             else :
                 return current
         return None
+
+        # time complexity is O(h) ; if its aba;lnced tree then h would be logn , if its a skewed 
+        # tree it would be O(n)
+        # space complexity would be O(1) as just one variable
