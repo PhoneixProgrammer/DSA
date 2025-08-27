@@ -2,24 +2,23 @@ class RandomizedSet:
 
     def __init__(self):
         self.arr = []
-        self.pos = {}
-
+        self.pos =  {}
     def insert(self, val: int) -> bool:
-        if val in self.pos :
+        if val in self.pos:
             return False
         self.arr.append(val)
         self.pos[val]=len(self.arr)-1
         return True
 
     def remove(self, val: int) -> bool:
-        if val not in self.pos:
+        if val not in self.pos :
             return False
         
-        idx=self.pos[val]
-        last_val=self.arr[-1]
-
-        self.arr[idx]=last_val
-        self.pos[last_val]=idx
+        idx = self.pos[val]
+        last_val = self.arr[-1]
+        
+        self.arr[idx]= last_val
+        self.pos[last_val] = idx
 
         self.arr.pop()
         del self.pos[val]
@@ -28,7 +27,6 @@ class RandomizedSet:
 
     def getRandom(self) -> int:
         return random.choice(self.arr)
-        
 
 
 # Your RandomizedSet object will be instantiated and called as such:
