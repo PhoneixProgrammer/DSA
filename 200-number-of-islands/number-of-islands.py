@@ -1,31 +1,28 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        #edge case
         if not grid :
             return 0
-        
 
         rows = len(grid)
-        cols =  len(grid[0])
-        count = 0
+        cols = len(grid[0])
+        count = 0 # no if islands
 
         def dfs(r,c):
-            if r<0 or r>=rows or c<0  or c>=cols or grid[r][c]=='0':
-                return 
-            
-            #mark as visited
-            grid[r][c]='0'
+            #boundary check and water check
+            if r < 0 or r>=rows or c<0  or c>=cols or grid[r][c]=='0':
+                return
 
-            #exploring neighbors
-            dfs(r+1,c)
-            dfs(r,c+1)
-            dfs(r-1,c)
-            dfs(r,c-1)
+            grid[r][c]='0' # mark as visited
+
+            dfs(r+1,c) #down
+            dfs(r-1,c) # up
+            dfs(r,c+1) # right
+            dfs(r,c-1) # left
+
 
         for r in range(rows):
-            for c in range (cols):
-                if grid[r][c] == '1':
-                    #Found new island
-                    count += 1 
+            for c in range(cols):
+                if grid[r][c]=='1':
+                    count += 1
                     dfs(r,c)
         return count
