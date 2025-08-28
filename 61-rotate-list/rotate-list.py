@@ -43,3 +43,6 @@ class Solution:
         new_tail.next = None
 
         return new_head
+
+        #Time Complexity : O(n)
+        #Space Complexity : O(1)
