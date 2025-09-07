@@ -1,14 +1,14 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        if not strs : 
+        #edge case if the length of strs is 0
+        if len(strs) == 0:
             return ""
-
-        for i in range(len(strs[0])):
-            char =  strs[0][i] # character to compare
-            for s in strs[1:]:
-                if i >= len(s) or s[i]!=char:
-                    return strs[0][:i] #return prefix found so far
-        return strs[0] #all characters matched
-
-        #Time Complexity : O(MxN)
-        # Space Complexity : O(1)
+        
+        #horizontal scanning 
+        prefix = strs[0]
+        for s in strs[1:]:
+            while not s.startswith(prefix):
+                prefix = prefix[:-1]
+                if not prefix :
+                    return ""
+        return prefix
