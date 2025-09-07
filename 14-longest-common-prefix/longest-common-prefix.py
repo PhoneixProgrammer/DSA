@@ -12,3 +12,7 @@ class Solution:
                 if not prefix :
                     return ""
         return prefix
+
+        #time complexity 
+        # O(n*m^2)
+        #s.c : O(1)
