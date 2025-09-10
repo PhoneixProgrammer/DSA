@@ -10,3 +10,5 @@ class Solution:
             maxSub = max(currSum,maxSub)
             # print("currSum","maxSub","n",currSum,maxSub,n)
         return maxSub
+
+        #O(n) and O(1) space complexity
