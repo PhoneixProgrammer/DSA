@@ -7,3 +7,5 @@ class Solution:
             if complement in dict_map :
                 return [dict_map[complement],i]
             dict_map[num] = i
+
+        #Time Complexity and Space Complexity is O(n)
