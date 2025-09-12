@@ -8,3 +8,6 @@ class Solution:
                 return [dict_map[complement],i]
             dict_map[nums[i]] = i
         
+
+        #Time Complexity :  O(n)
+        #S.c: O(n) ==> because in worst case it stores each number in dictionary
