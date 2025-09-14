@@ -5,27 +5,23 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        heap = []
-        count = 0  # Unique index to break ties
+        #Brute force Approach 
+        # Approach is each node in each of the linked list , i am adding to an array
+        # i sort the array
+        # that array i convert it to linked list of nodes 
+        nodes = []
+        head = point = ListNode(0)
 
-        for node in lists:
-            if node:
-                heapq.heappush(heap, (node.val, count, node))
-                count += 1
+        for l in lists:
+            while l :
+                nodes.append(l.val)
+                l =l.next
+        
+        for x in sorted(nodes):
+            point.next = ListNode(x)
+            point =  point.next 
+        
+        return head.next
 
-        dummy = ListNode(0)
-        curr = dummy
-
-        while heap:
-            val, _, node = heapq.heappop(heap)
-            curr.next = node
-            curr = curr.next
-
-            if node.next:
-                heapq.heappush(heap, (node.next.val, count, node.next))
-                count += 1
-
-        return dummy.next    
-
-        # time complexity is O(Nlogk)
-        # space complexity is O(k)
+        #Time Complexity : O(NlogN)
+        #Space Complexity :O(N) cost 
