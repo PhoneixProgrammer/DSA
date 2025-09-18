@@ -17,6 +17,7 @@ class LRUCache:
         if len(self.cache) > self.capacity :
             self.cache.popitem(last= False)
 
+        #Time and Space Complexity : O(1) and O(capcity)
 # Your LRUCache object will be instantiated and called as such:
 # obj = LRUCache(capacity)
 # param_1 = obj.get(key)
