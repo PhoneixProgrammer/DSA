@@ -1,13 +1,13 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        dict_map  = {}
+        #datastructiure
+        dict_map = {}
 
-        for i in range(len(nums)) :
-            complement = target - nums[i] 
+        for i in range(len(nums)):
+            complement = target - nums[i]
+
             if complement in dict_map :
-                return [dict_map[complement],i]
+                return [dict_map[complement],i] 
             dict_map[nums[i]] = i
-        
+  
 
-        #Time Complexity :  O(n)==> in worst case we have to traverse till th end of the araay visiting each didgit
-        #S.c: O(n) ==> because in worst case it stores each number in dictionary
