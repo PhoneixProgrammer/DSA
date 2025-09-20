@@ -1,5 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        '''
 
         #Sliding Window Technique
         charSet = set() # to store each character 
@@ -12,4 +13,16 @@ class Solution:
                 left += 1
             charSet.add(s[right])
             res = max(res, right-left+1)
+        return res'''
+
+        charSet = set()
+        left = 0
+        res =0 
+
+        for char in range(len(s)):
+            while s[char] in charSet :
+                charSet.remove(s[left])
+                left += 1
+            charSet.add(s[char])
+            res = max(res,char-left+1)
         return res
