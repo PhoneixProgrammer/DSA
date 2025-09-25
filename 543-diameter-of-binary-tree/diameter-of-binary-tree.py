@@ -6,12 +6,12 @@
 #         self.right = right
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        diameter = 0
+        diameter  = 0 
 
         def longest_path(node):
-            if not node:
+            if not node :
                 return 0
-            nonlocal diameter 
+            nonlocal diameter
 
             left_path = longest_path(node.left)
             right_path = longest_path(node.right)
@@ -19,9 +19,8 @@ class Solution:
             diameter = max(diameter, left_path+right_path)
 
             return max(left_path,right_path) + 1
-        
         longest_path(root)
         return diameter
 
         #t.c : O(n)
-        #Space Complexity = O(h) (height of tree), which is O(n) in worst case, O(log n) if balanced.
+        #S.c:O(h)
