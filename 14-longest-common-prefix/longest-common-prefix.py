@@ -1,16 +1,8 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        if len(strs) == 0 :
-            return ""
+        common_prefix = strs[0]
 
-        
-        result = strs[0]
-        for i in strs[1:]:
-            while not i.startswith(result) :
-                result =  result[:-1]
-                if not result :
-                    return ""
-        return result
-
-        #time complexity is O(mxn)
-        #space complexity : O(1)
+        for i in range(1, len(strs)):
+            while not strs[i].startswith(common_prefix) :
+                common_prefix = common_prefix[:-1]
+        return common_prefix
