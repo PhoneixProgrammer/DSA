@@ -27,3 +27,6 @@ class Solution:
 
         return dummy.next
 
+        # t.c : O(n)
+        #s.c : O(1)
+
