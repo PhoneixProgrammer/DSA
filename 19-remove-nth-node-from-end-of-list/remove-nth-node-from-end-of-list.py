@@ -5,22 +5,25 @@
 #         self.next = next
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        dummy = ListNode(0,head)
+        #edge cases like when you want to delete first node in the linkedlist
+        # 
+        dummy = ListNode(0, head)
         fast = slow = dummy
 
-        #Move fast pointer n+1 steps ahead
+        #move fast n+1 steps ahead
         for _ in range(n+1):
-            fast = fast.next
+            fast = fast.next 
 
-        #Move fast to the end, slow will reach node before the target
+        # move both pointers until fast reaches the end 
         while fast :
             fast = fast.next
             slow = slow.next
-
-        #remove the nth node from end 
-        slow.next = slow.next.next
+        
+        # 1 ->  2 - > 3-   >4 -  >5 -->None
+        #             slow             fast
+        
+        #delete the node
+        slow.next= slow.next.next
 
         return dummy.next
 
-        #time complexity : O(N)
-        #space complexity : O(1)
