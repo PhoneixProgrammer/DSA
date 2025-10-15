@@ -9,4 +9,4 @@ class Solution:
         return dp[-1]
 
         # T.C : O(m*n)
-        # S.C : O*1
+        # S.C : O*n
