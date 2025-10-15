@@ -1,5 +1,9 @@
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
+        # able to identify which algorithm to use 
+        #  need to understand how the code solution is actually solving the priblem
+        #need to do handson coding
+
         # dp[j] represents number of paths to reach column j in current row 
         dp = [1] * n # first row is all 1s
 
