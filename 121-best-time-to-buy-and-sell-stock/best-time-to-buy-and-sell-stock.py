@@ -3,10 +3,10 @@ class Solution:
         min_val = float('inf')
         profit = 0
 
-        for i in range(len(prices)):
-            if prices[i] < min_val :
-                min_val = prices[i]
-            elif prices[i] - min_val > profit :
-                profit = prices[i]-min_val
+        for price in prices :
+            if price < min_val :
+                min_val = price 
+            else :
+                profit = max(profit, price-min_val)
 
         return profit 
