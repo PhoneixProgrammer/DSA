@@ -22,3 +22,13 @@ class Solution:
                 right -= 1
 
         return water
+
+        '''
+        ⏱️ Time Complexity
+
+O(n) — Each index is processed at most once.
+
+\U0001f9ee Space Complexity
+
+O(1) — Only a few variables are used, no extra arrays.
+'''
