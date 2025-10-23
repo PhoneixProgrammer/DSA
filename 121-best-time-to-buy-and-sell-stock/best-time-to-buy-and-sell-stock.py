@@ -10,3 +10,11 @@ class Solution:
                 profit = max(profit, price-min_val)
 
         return profit 
+
+        '''
+        | Complexity Type  | Value    | Explanation                        |
+| ---------------- | -------- | ---------------------------------- |
+| Time Complexity  | **O(n)** | Single pass through prices         |
+| Space Complexity | **O(1)** | Only constant extra variables used |
+
+'''
