@@ -8,4 +8,6 @@ class Solution:
         return prefix
 
         #tIme Complexity : O(n*m)
+        # -- n is lengths of the strs
+        # --- m is the length of the first string or prefix 
         #Space Complexity : O(1)
