@@ -6,3 +6,6 @@ class Solution:
             while not strs[i].startswith(prefix):
                 prefix = prefix[:-1]
         return prefix
+
+        #tIme Complexity : O(n*m)
+        #Space Complexity : O(1)
