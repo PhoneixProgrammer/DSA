@@ -6,3 +6,6 @@ class Solution:
             if complement in nums_dict:
                 return [i, nums_dict[complement]]
             nums_dict[nums[i]] = i
+
+    #Time Complexity : O(n)
+    #Space Complexity : O(n)
