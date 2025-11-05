@@ -1,17 +1,21 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        pairs = {'(':')','{':'}','[':']'}
         stack = []
+        brackets_dict = {'(': ')', '{': '}', '[':']'}
 
-        for ch in s :
-            if ch in pairs : 
-                stack.append(ch)
-            else : 
-                #case when there is no opening bracket , found closing bracket 
-                if not stack :
-                    return False
+        for char in s :
+            if char in brackets_dict : 
+                stack.append(char)
                 
-                top_ch =  stack.pop()
-                if pairs[top_ch]!=ch :
-                    return False
-        return len(stack)==0
+            elif stack and char == brackets_dict[stack[-1]]:
+                stack.pop()
+            else:
+                return False
+           
+        
+        if len(stack) == 0  :
+            return True
+        else :
+            return False
+
+        #T.C  and S.C : O(n)
