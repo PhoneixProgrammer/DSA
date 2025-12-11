@@ -11,3 +11,8 @@ class Solution:
                 if not prefix :
                     return ""
         return prefix
+
+        # Time Complexity : O(n*k)
+        # -- >  n = length of strs and k is the number of characters in prefix
+
+        #Space Complexity : O(k)
