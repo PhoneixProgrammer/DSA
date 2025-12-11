@@ -1,31 +1,32 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        #First Pass : remove invalid ')'
+        
+        # First Pass:  remove excess ")" from left to right
         res = []
         open_count = 0
-        for ch in s:
-            if ch == '(':
+        for c in s :
+            if c == "(":
                 open_count += 1
-                res.append(ch)
-            elif ch == ')':
+                res.append(c)
+            elif c == ")":
                 if open_count > 0:
                     open_count -= 1
-                    res.append(ch)
-                # else skip this ")"
-            else :
-                res.append(ch)
+                    res.append(c)
+            else:
+                res.append(c)
 
-        #Second Pass : remove extra '(' from right to left
-        final = [] 
+        # Second Pass : remove excess "(" from right to left
+        final = []
         open_count = 0
-        for ch in reversed(res):
-            if ch == ")":
+        for c in reversed(res):
+            if c == ")":
                 open_count += 1
-                final.append(ch)
-            elif ch == "(":
+                final.append(c)
+            elif c == "(":
                 if open_count > 0 :
                     open_count -= 1
-                    final.append(ch)
+                    final.append(c)
             else:
-                final.append(ch)
+                final.append(c)
+        
         return ''.join(reversed(final))
