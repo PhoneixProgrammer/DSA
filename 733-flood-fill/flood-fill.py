@@ -18,6 +18,15 @@ class Solution:
             dfs(r+1,c)
             dfs(r,c-1)
             dfs(r,c+1)
-            
+
         dfs(sr,sc)
         return image
+
+
+        # Time Complexity : O(mxn) recursion stack 
+        # -- >  worst case when every cell is filled with same color 
+        # Space complexity : O(mxn) recursion stack 
+
+        #BEst case 
+        # time compexity : O(1)
+        # S.C : O(1)
